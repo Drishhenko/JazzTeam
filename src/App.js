@@ -13,11 +13,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar/>
+      <NavBar  isAuth = {isAuth} setIsAuth={setIsAuth}/>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<LoginPage isAuth ={isAuth} setIsAuth={setIsAuth} />} />
-        <Route path="/profile" element={<ProfilePage isAuth ={isAuth}/>} />
+        <Route path="/profile" element={<ProfilePage/>} />
         <Route path="/info" element={<InfoPage />} />
       </Routes>
     </BrowserRouter>

@@ -2,13 +2,12 @@ import React, { useState }  from 'react'
 import { useNavigate } from 'react-router-dom'
 import './loginPage.css'
 
-const LoginPage = () => {
+const LoginPage = ({setIsAuth}) => {
   const navigate = useNavigate()
   const user = {
     username: 'Admin',
     password: '12345678'
   }
-
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -19,8 +18,9 @@ const LoginPage = () => {
         } else if(!password === user.password) {
             alert('Incorrect password')
         } else {
-          localStorage.setItem('isLogin', true)
-          navigate('/main')
+          localStorage.setItem('isAuth', true)
+          setIsAuth(localStorage.getItem('isAuth'))
+          navigate('/profile')
         }
   }
 
