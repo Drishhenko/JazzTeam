@@ -1,0 +1,39 @@
+.login-form {
+    background-color: rgb(56, 13, 95);
+    height: 50vh;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+}
+
+input {
+    width: 75%;
+    height: 42px;
+    border-radius: 8px;
+    margin: 6px;
+    text-indent: 5%;
+    font-size: large;
+}
+
+.login {
+    width: 15%;
+    height: 42px;
+    border-radius: 8px;
+    margin: 16px;
+    font-size: large;
+    background-color: rgb(89, 39, 122);
+    color: antiquewhite;
+    border: none;
+    cursor: pointer;
+}
+
+.login:hover,
+.active {
+    border-style: outset;
+}
